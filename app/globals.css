@@ -5,6 +5,7 @@
 /* base styles */
 body {
   background: #ebf0fa;
+  /* background: #001d3d; */
   @apply text-gray-500 m-8;
 }
 h1, h2 {

@@ -2,10 +2,8 @@ import Link from "next/link";
 import { Ticket } from "../api/models/Ticket";
 
 export default async function TicketList() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/tickets`, {cache: "no-store"});
-console.log(res)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/tickets`, { cache: "no-store" });
   const ticketsList: Ticket[] = await res.json();
-console.log(ticketsList)
 
   if (!res.ok) {
     throw new Error("Failed to fetch tickets");
